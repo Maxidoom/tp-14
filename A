@@ -1,0 +1,33 @@
+1.
+Es una función miembro declarada con la palabra clave "virtual" en una clase base que se redefine en clases derivadas.
+
+2.
+Las funciones normales emplean enlace estático en tiempo de compilación, mientras que las funciones virtuales usan enlace dinámico en tiempo de ejecución según el objeto realmente apuntado.
+La sobrecarga requiere funciones con diferente tipo o número de parámetros resueltas en compilación. La redefinición de una función virtual exige exactamente el mismo prototipo y parámetros resueltos en tiempo de ejecución.
+
+3.
+Se declara poniendo "virtual" al prototipo de la función en la clase base.  
+"virtual tipo nombre_de_funcion(parametros);".
+
+4.
+Es la capacidad de aplicar el principio de "una interfaz, múltiples métodos", permitiendo acceder a distintas implementaciones mediante un mismo nombre.
+
+5.
+Ventajas: Promueve la reutilización de código, simplifica el diseño y facilita extender el sistema.
+Desventajas: Brinda mayor flexibilidad pero resulta más lento por la resolución en tiempo de ejecución.
+
+6.
+Sí, las funciones virtuales se deben declarar en la clase base. Esto permite que la clase base defina la interfaz genérica y común que implementarán las clases derivadas.
+
+7.
+Es una función declarada en la clase base que no tiene definición, lo que obliga a las clases derivadas a definir su propia versión.  
+Se declara asignando "= 0" al prototipo: "virtual tipo nombre(parametros) = 0;".
+
+8.
+Se logra asignando un objeto de una clase derivada a un puntero o referencia de la clase base. Al llamar a la función virtual, C++ evalúa en tiempo de ejecución el objeto apuntado y ejecuta su método correspondiente.
+
+9.
+Es aquella clase que contiene al menos una función virtual pura. No permite crear objetos directamente, pero sí permite usar punteros y referencias para dar soporte al polimorfismo.
+
+10.
+Se usa tras la firma de la función en la clase derivada para especificar que sobrescribe una función virtual de la clase base. Se recomienda para mejorar la claridad del código y permitir que el compilador reporte errores si las firmas no coinciden.
